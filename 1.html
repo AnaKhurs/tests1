@@ -1,0 +1,87 @@
+<html>
+
+<form> 
+<input  id="search"  class= "search" type="text" style=" border: 1px solid red; font-size:18pt;height:50px;width:200px; padding: 10px;"> </<input>
+<button  id="butt" class="button" type="button" value="Найти" style="background-color:green; font-weight:bold; font-size:18pt;height:50px;width:200px;">Поиск</button>
+
+</form>
+
+
+<script>
+
+let search = document.getElementById("search");
+let butt = document.getElementById("butt");
+
+butt.addEventListener("click", () => {
+
+if (search.value == 'google') {
+  alert("Yandex круче. Но это не точно");
+} else {
+  alert(search.value);
+  alert( users[0].name );
+}
+
+});
+
+let users = [
+  {name:"Настя"}, {age: "28"},
+  {name:"Алексей"}, {age: "19"},
+  {name:"Дмитрий"}, {age: "31"},
+];
+
+
+function sum(a, b) {
+  return a + b;
+}
+
+let result = sum(1, 2);
+alert( result ); // 3
+
+
+
+let minNum = [25, 3, 40, 8, 17, -1];
+let min = minNum[0];
+let max = minNum[0];
+ 
+for (let i = 1; i < minNum.length; i++) {
+    if(minNum[i] < min){
+        min = minNum[i];
+    }
+    if(minNum[i] > max){
+        max = minNum[i];
+    } 
+}
+ 
+alert(min);
+alert(max);
+
+
+        let a = 123;
+        let b = 12312;
+        console.log('Было', 'a:', a,'b:', b);
+
+        let c = a;
+        a = b;
+        b = c;
+
+        console.log('Стало', 'a:', a,'b:', b);
+
+
+
+function findMax(numArray) {
+  return Math.max.apply(null, numArray);
+}
+
+
+function sayHi() {
+  alert('alert с таймером 3 секунды');
+}
+
+setTimeout(sayHi, 3000);
+
+
+</script>
+
+</html>
+
+
